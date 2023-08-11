@@ -48,3 +48,4 @@ Created with Spring Boot inilitizr, the following dependencies were added.
 To get influx running, `cd influx` and `docker run -p 8086:8086 -v myInfluxVolume:/var/lib/influxdb2 influxdb:latest`. 
 
 ![](/pics/influx.png)
+
