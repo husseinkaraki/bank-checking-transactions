@@ -1,0 +1,14 @@
+management:
+  influx:
+    metrics:
+      export:
+        bucket: a55d6b23b7e2c6df
+        token: 2rs6hQ0N76_X-HaMmIfI6nJgKB7R4RNM-uJihBqSh7Y2wL0jqqwz2_wFyjovLtN7zg9K3gJN1zM1nyHSscj3-A==
+        org: Proton Forest
+
+logging:
+  level:
+    # Will generate a log everytime a publish event occurs, about once a minute.  
+    io.micrometer.influx.InfluxMeterRegistry : DEBUG 
+
+    
