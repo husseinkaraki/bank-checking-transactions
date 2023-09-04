@@ -17,7 +17,6 @@ You can find the database diagram [here](https://dbdiagram.io/d/64d3b91d02bd1c4a
 #### RESTful API
 This API consumes transactions with a RESTful interface. Visit the OpenAPI spec for integration details. 
 
-
 ## Dependencies 
 
 ### Spring Dependencies
@@ -42,10 +41,45 @@ Created with Spring Boot inilitizr, the following dependencies were added.
 - Spring Boot 3.1.2 
 - Gradle 
 
-## Setup
+## Setup Dev Env
+
+
+### VS Code
+Install the proper extenstions. Download jdk 17 and install. Install gradle. Update your `settings.json` to include your jdk classpath.
+
+e.g. 
+```
+{
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "/home/husseinroot/jdk/amazon-corretto-17.0.8.8.1-linux-x64",
+      "default": true
+    },
+  ],
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.format.settings.url": "eclipse-formatter.xml",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+  },
+}
+```
+
+<kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> or save document to format your java file.
+<kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> or save document to optimize your imports for Windows.
+<kbd>option</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> or save document to optimize your imports for Mac.
+
+Note: You may have issues with Intellisence detecting static imports. 
 
 ### Influx
 To get influx running, `cd influx` and `docker run -p 8086:8086 -v myInfluxVolume:/var/lib/influxdb2 influxdb:latest`. 
 
 ![](/pics/influx.png)
 
+### Postgres
+To start your database, run `docker-compose -f docker-compose.yml up`. Then login with user `postgres` and password `example`.
