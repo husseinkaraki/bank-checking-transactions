@@ -2,13 +2,23 @@ management:
   influx:
     metrics:
       export:
-        bucket: a55d6b23b7e2c6df
-        token: 2rs6hQ0N76_X-HaMmIfI6nJgKB7R4RNM-uJihBqSh7Y2wL0jqqwz2_wFyjovLtN7zg9K3gJN1zM1nyHSscj3-A==
-        org: Proton Forest
+        bucket: asdf
+        token: hXPU0j1t3PbMaDSDEElC-jv9bb8NPl1j2ErddM1eGlsAhtWJp8uXNxyR15qW-YDbK1e2FLu5lF1HOLx6dxhimA==
+        org: asdf
 
 logging:
   level:
-    # Will generate a log everytime a publish event occurs, about once a minute.  
+    # Will generate a log everytime a publish event occurs, about once a minute. Change to Info to remove log. 
     io.micrometer.influx.InfluxMeterRegistry : DEBUG 
 
-    
+spring: 
+  datasource: 
+    url:  jdbc:postgresql://172.23.121.7:5432/mydb
+    username: postgres
+    password: example
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

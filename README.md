@@ -82,4 +82,21 @@ To get influx running, `cd influx` and `docker run -p 8086:8086 -v myInfluxVolum
 ![](/pics/influx.png)
 
 ### Postgres
-To start your database, run `docker-compose -f docker-compose.yml up`. Then login with user `postgres` and password `example`.
+To start your database, run `docker-compose -f docker-compose.yml up`. Then login with user `postgres` and password `example`. Setup a username, password, organization name, and API Token. Then update the local `application.yml` with the credentials. You may have issues if you're running everything from within a WSL2 environement - try running `ip addr` and getting the eth0 IP, and using that as your host. 
+
+![](/pics/pgadmin.png)
+
+
+### Additional Libraries
+Using Jakarta Validatoin (the interface, previously known as javax) and Hibernate Validator for bean validation. Jackson does not support things like null checks on json fields (`TransactionRequest.java`).
+
+### Sample JSON
+```
+{
+    "transaction" : {
+        "checkingAccountId" : "12345",
+        "amount" : 1234,
+        "createdAt" : "2023-09-04T14:30:00.123+03:00"
+    }
+}
+```

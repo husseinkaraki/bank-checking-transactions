@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class PostTransactionResult {
+public class TransactionResult {
     public String message;
 }
