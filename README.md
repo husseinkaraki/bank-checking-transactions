@@ -1,4 +1,4 @@
-# Bank Checking Transactions
+# Bank Checking Transactions - IN PROGRESS
 Bank Checking Transactions is a sample Spring Boot project that demonstrates how to leverage Spring Boot and Postgres to accomplish the task of storing transactions and checking balances. It uses a couple different interfaces, including REST, GraphQL, and Apache Kafka. There are also some management tools such as PgAdmin, Influx, and Kafka Admin Portal to manage the dependent infrastructure. Test Driven Development (TDD) was used to develop the application. Additoinal libries were used, including Lombok, Jakarta Bean Validation, Hibernate Validator, and JPA. 
 
 ## Documentation
